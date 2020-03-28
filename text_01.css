@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: 100%;
+}
+.top{
+    width: 100%;
+    height: 100px;
+}
+.pad{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 头部 */
+.top .pad .left{
+    width: 70px;
+    height: 100px;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+.top button{
+    width: 70px;
+    height: 30px;
+    background-color: #f00;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.top .pad .right{
+    float: right;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.top .pad .right img{
+    width: 15px;
+    height: 15px;
+}
+
+/* 中间 */
+.center{
+    width: 100%;
+    background-color: #eee;
+}
+/* 导航条 */
+.center .pad .first{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.center .pad .first .title{
+    display: flex;
+    flex-direction: column;
+}
+.center .pad .first .title .bigword{
+    font-size: 25px;
+    color: black;
+}
+.center .pad .first .title .smallword{
+    font-size: 16px;
+    color: #999;
+}
+.center .pad .first .navigation{
+    position: relative;
+}
+.center .pad .first .navigation .line{
+    width: 80px;
+    height: 1px;
+    background-color: #999;
+    left: 20px;
+    bottom: 0px;
+    position: absolute;
+    transition: all 0.5s linear;
+}
+.center .pad .first .navigation ul{
+    list-style: none;
+}
+.center .pad .first .navigation ul li{
+    float: left;
+    height: 25px;
+    margin-left: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* 轮播图右边文字部分 */
+.center .pad .second{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+.center .pad .second .swiper{
+    width: 580px;
+    background-color: #fff;
+}
+.center .pad .second .support{
+    width: 580px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.support .req{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+.support .req span{
+    font-size: 20px;
+}
+.support .req button{
+    width: 80px;
+    height: 40px;
+    background-color: #fff;
+    color: #999;
+    text-align: center;
+    line-height: 40px;
+    outline: none;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+.support .time{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+}
+.support .time .one{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.support .time .two span{
+    font-weight: 700;
+}
+.support .time .one span:nth-child(1){
+    width: 100px;
+}
+.support .time .one span:nth-child(2){
+    width: 380px;
+}
+.support .time .one span:nth-child(3){
+    width: 60px;
+}
+.support .time .one button{
+    width: 60px;
+    height: 30px;
+    color: #fff;
+    background-color: greenyellow;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* 轮播图 */
+.zbox888{
+    position: relative;
+    overflow: hidden;
+    width: 560px;
+    height: 230px;
+}
+.zbanner888 {
+    width: 100%;
+    padding: 10px;
+    height: 230px;
+}
+
+.zbanner888 img {
+    width: 100%;
+    height: 230px;
+    display: none;
+    cursor: pointer;
+}
+
+.znumber8{
+    position: absolute;
+    bottom: 20px;
+    left: 35%;
+}
+.znumber8 li{
+    float: left;
+    color: #000;
+    background: #fff;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 0px;
+}
+.znumber8 .zcurrent8{
+    background: #07f7f7;
+}
+.zfoot8 {
+    position: absolute;
+    top: 48%;
+    width: 30px;
+    height: 30px;
+    background: #07f7f7;
+    line-height: 30px;
+    color: #eee;
+    opacity: .6;
+    display: none;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    -moz-user-select: none;
+    /*mozilar*/
+    -webkit-user-select: none;
+    /*webkit*/
+    -ms-user-select: none;
+    /*IE*/
+    user-select: none;
+    border-radius: 50%;
+}
+.zleft8 {
+    left: 20px;
+    outline: none;
+}
+.zright8 {
+    right: 20px;
+    outline: none;
+}
+.zbanner888 .show8 {
+    display: block;
+}
+
+/* 底部 */
+.bottom{
+    background-color: #292828;
+    width: 100%;
+    height: 250px;
+}
+.bottom .mar{
+    width: 1200px;
+    margin: 0 auto;
+}
+.bottom .mar .flex{
+    padding: 50px 0;
+    display: flex;
+    width: 100%;
+    height: 150px;
+}
+.flex > div{
+    flex:1 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.flex .teshu{
+    height: 75px;
+}
+.flex div span a{
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+}
+.flex div span a::before{
+    content: "";
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 0;
+}
+.flex div span a:hover:before{
+    animation: test .5s ease;
+    width: 100%;
+} 
+@keyframes test{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+.flex .but{
+    display: inline-block;
+    margin-top: 12px;
+}
+.flex .but button{
+    width: 70px;
+    height: 30px;
+    background-color: #f00;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.end{
+    width: 100%;
+    height: 30px;
+    background-color: #1d1c1c;
+}
+
+/* 图 */
+.center .pad .third{
+    background-color: #fff;
+    margin-top: 10px;
+}
+.center .pad .fourth{
+    margin-top: 10px;
+    height: 300px;
+    padding-bottom: 30px;
+}
+.center .pad .fourth .pie{
+    float: left;
+    width: 580px;
+    background-color: #fff;
+}
+.center .pad .fourth .histogram{
+    float: right;
+    width: 580px;
+    background-color: #fff;
+}
