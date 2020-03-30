@@ -17,7 +17,7 @@ $('.nav').on('click', 'li', function() {
 
 
 //轮播图
-var speed = 3000;//时间
+var speed = 5000;//时间
 var num = 1; //循环遍历
 var playtime8;
 
@@ -172,7 +172,7 @@ let series1;
 function ajaxs1(){
     //1.创建Ajax对象
     var myajax1=new XMLHttpRequest()
-myajax1.open('GET','https://edu.telking.com/api/?type=week',true);
+    myajax1.open('GET','https://edu.telking.com/api/?type=week',true);
     //3.发送请求
     myajax1.send(null);
     //4.接受返回的数据
@@ -191,27 +191,25 @@ myajax1.open('GET','https://edu.telking.com/api/?type=week',true);
     }
 
 }
+
 function options1() {
+    let datas = [];
+    for(var i = 0; i < xAxis1.length; i++) {
+        datas.push({value: series1[i],name: xAxis1[i]})
+    }
+    console.log(datas)
     var option1 = {
         title: {
             x:'230px',
             y:'10px',
             text: '饼状图数据展示'
-        },
+        }, 
         series : [
             {
                 name: '访问来源',
                 type: 'pie',
                 radius: '55%',
-                data:[
-                    {value:series1[0], name:xAxis1[0]},
-                    {value:series1[1], name:xAxis1[1]},
-                    {value:series1[2], name:xAxis1[2]},
-                    {value:series1[3], name:xAxis1[3]},
-                    {value:series1[4], name:xAxis1[4]},
-                    {value:series1[5], name:xAxis1[5]},
-                    {value:series1[6], name:xAxis1[6]},
-                ]
+                data:datas
             }
         ]
     };
@@ -234,7 +232,7 @@ function options2() {
         series: [{
             name: '商品数',
             type: 'bar',
-            data: [9,11,13,10,8,11,5],
+            data: series1,
             barWidth: 20,   //柱状宽度
             itemStyle: {    //柱状颜色和圆角
                 color: '#07f7f7',
