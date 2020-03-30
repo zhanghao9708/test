@@ -197,7 +197,7 @@ function options1() {
     for(var i = 0; i < xAxis1.length; i++) {
         datas.push({value: series1[i],name: xAxis1[i]})
     }
-    console.log(datas)
+    // console.log(datas)
     var option1 = {
         title: {
             x:'230px',
